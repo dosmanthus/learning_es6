@@ -1,0 +1,18 @@
+{
+  "name": "02_02_transpiling_es6_with_babel_and_babel_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "script": {
+    "build": "babel --preset env src -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  }
+}
