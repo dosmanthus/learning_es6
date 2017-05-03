@@ -90,3 +90,62 @@ $ npm run build
 參考：
 - [Using Babel](https://babeljs.io/docs/setup/#installation)
 - [Traversy Media - Compile ES6 With Babel](https://www.youtube.com/watch?v=sZ0z7B7QmjI)
+
+## [Transpiling with Webpack](./02_03_transpiling_with_webpack)
+
+[Webpack](https://webpack.github.io/)
+
+- create package.json
+
+```
+$ npm init
+```
+
+- install webpack
+
+```
+$ npm install -g webpack
+```
+
+- install babel
+
+```
+$ npm install babel-loader babel-core babel-preset-env --save-dev
+```
+
+- create webpack config file
+
+```
+# webpack.config.js
+
+module.exports = {
+  entry: './script.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  module: {
+    loaders: [
+      { test: /\.js?/, exclude: /node_modules/, loader: "babel-loader" }
+    ]
+  }
+}
+```
+
+- Create .babelrc configuration file
+
+```
+# .babelrc
+{
+  "presets": ["env"]
+}
+```
+
+- run webpack
+
+```
+  $ webpack
+```
+
+參考：
+
+[Using Babel](https://babeljs.io/docs/setup/#installation)
