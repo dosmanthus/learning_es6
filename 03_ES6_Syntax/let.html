@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+    section > div {
+      height: 100px;
+      width: 100px;
+      background-color: red;
+      float: left;
+      margin: 3px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+  <header><h1>Click on a box</h1></header>
+  <section></section>
+  <script type="text/javascript">
+    for (let i = 0; i < 45; i++) {
+      // 如果使用var定義，底下的i會一直回傳45
+      var div = document.createElement('div');
+      div.onclick = function () {
+        alert(`You clicked on a bix ${i+1}`)
+      };
+      document.getElementsByTagName('section')[0].appendChild(div);
+    }
+  </script>
+</body>
+</html>
