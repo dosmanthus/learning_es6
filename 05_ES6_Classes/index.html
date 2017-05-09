@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    class Vehicle {
+      constructor(description, wheels) {
+        this.description = description;
+        this.wheels = wheels;
+      }
+      describeYourself() {
+        console.log(`I am a ${this.description} with ${this.wheels} wheels`)
+      }
+    };
+    var coolSkiVan = new Vehicle('New Ski van', 4);
+    coolSkiVan.describeYourself();
+
+    class semiTruck extends Vehicle {
+      constructor() {
+        super("semi truck", 18)
+      }
+    };
+    var groceryStoreSemi = new semiTruck();
+    groceryStoreSemi.describeYourself();
+  </script>
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
